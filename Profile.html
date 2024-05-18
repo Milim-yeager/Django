@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My CV</title>
+    <style>
+        /* استایل‌دهی به صفحه را اینجا انجام دهید */
+    </style>
+</head>
+<body>
+    {% if profile %}
+        <h1>{{ profile.name }}</h1>
+        <p>Email: {{ profile.email }}</p>
+        <p>Phone: {{ profile.phone }}</p>
+        <h2>Summary</h2>
+        <p>{{ profile.summary }}</p>
+        <h2>Skills</h2>
+        <p>{{ profile.skills }}</p>
+        <h2>Experience</h2>
+        <p>{{ profile.experience }}</p>
+        <h2>Education</h2>
+        <p>{{ profile.education }}</p>
+    {% else %}
+        <p>No profile found.</p>
+    {% endif %}
+</body>
+</html>
